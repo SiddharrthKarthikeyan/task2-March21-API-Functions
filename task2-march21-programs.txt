@@ -1,0 +1,48 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+    var arr = userInput[0].split(" ").map(function(val){
+       return Number(val);
+     });
+     
+     console.log(arr);
+     
+       // console.log(a);
+    
+    var prime = function(a){
+        console.log("inside function :" + a);
+      var sum = 0;
+      var b = [];
+      for(var i = 0;i < a.length;i++){
+          if(a[i] !== 1){
+              var flag = 0;
+              for(var j = 2;j < a[i];j++){
+                  if(a[i] % j === 0){
+                      flag = 1;
+                      break;
+                  }
+              }
+              if(flag === 0){
+                b.push(a[i]);
+                console.log(a[i] + " " + flag);
+         
+          }
+           console.log(a[i] + " " + flag);
+           return b;
+      }
+      }
+    }
+      
+
+});
